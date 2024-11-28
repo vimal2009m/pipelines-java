@@ -1,6 +1,13 @@
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: "echo Hello"
-  displayName: "Name test"
+stages:
+- stage: Stage1
+  displayName: "stageA"
+  jobs:
+    - job: A
+- stage: Stage2
+  displayName: "stageB"
+  jobs:
+    - job: B
+    
